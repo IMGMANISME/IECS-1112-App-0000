@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.breakfastapp'
+    namespace 'com.example.breakfastorderapp'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.breakfastapp"
+        applicationId "com.example.breakfastorderapp"
         minSdk 29
         targetSdk 33
         versionCode 1

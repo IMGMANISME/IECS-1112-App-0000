@@ -1,4 +1,4 @@
-package com.example.breakfastapp;
+package com.example.breakfastorderapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
