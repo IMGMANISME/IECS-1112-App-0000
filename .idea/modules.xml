@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/IECS-1112-App-0000.iml" filepath="$PROJECT_DIR$/.idea/IECS-1112-App-0000.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/BreakfastOrderApp.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/BreakfastOrderApp.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/BreakfastOrderApp.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/BreakfastOrderApp.app.unitTest.iml" />
     </modules>
   </component>
 </project>
