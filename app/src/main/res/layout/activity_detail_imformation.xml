@@ -8,13 +8,16 @@
     tools:context=".DetailImformationActivity">
 
     <ScrollView
+        android:id="@+id/sv_detail"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/material_dynamic_neutral_variant90"
+        android:background="@drawable/background_grey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -22,17 +25,31 @@
             android:background="@drawable/background_white"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/im_food"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="166dp"
-                app:srcCompat="@drawable/corn" />
+                android:layout_height="166dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/background_white"
-                android:orientation="vertical" />
+                <ImageView
+                    android:id="@+id/im_food"
+                    android:layout_width="match_parent"
+                    android:layout_height="166dp"
+                    android:contentDescription="@string/app_name"
+                    android:foreground="@drawable/trending_gradient_shape"
+                    app:srcCompat="@drawable/corn" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="125dp"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:text="玉米蛋餅"
+                    android:textColor="#FFFFFF" />
+
+            </FrameLayout>
+
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
