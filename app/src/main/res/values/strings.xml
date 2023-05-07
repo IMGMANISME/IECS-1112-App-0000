@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="food_name">玉米蛋餅</string>
+    <string name="custom_option">客製選項</string>
+    <string name="double_egg">雙倍蛋</string>
+    <string name="double_ingredients">雙倍配料</string>
+    <string name="double_onion">雙倍蔥</string>
+    <string name="price_plus_ten">+$10</string>
+    <string name="note">備註</string>
+    <string name="note_hint">e.g. 蛋餅煎的焦一點,不要加蔥</string>
+    <string name="amount">數量</string>
+    <string name="add">+</string>
+    <string name="amount_number">0</string>
+    <string name="sub">-</string>
+    <string name="add_to_cart">加入購物車</string>
+    <string name="total_price">$35</string>
 </resources>

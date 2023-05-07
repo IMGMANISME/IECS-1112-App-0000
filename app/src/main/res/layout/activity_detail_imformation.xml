@@ -10,11 +10,11 @@
     <ScrollView
         android:id="@+id/sv_detail"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/background_grey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
@@ -41,11 +41,11 @@
                     android:id="@+id/tv_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp"
                     android:layout_marginTop="125dp"
-                    android:text="玉米蛋餅"
+                    android:text="@string/food_name"
                     android:textColor="#FFFFFF"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
             </FrameLayout>
@@ -62,9 +62,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="25dp"
                     android:layout_marginVertical="10dp"
-                    android:text="客製選項"
+                    android:text="@string/custom_option"
                     android:textColor="#000000"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -85,9 +85,9 @@
                             android:layout_width="100dp"
                             android:layout_height="51dp"
                             android:layout_marginStart="24dp"
-                            android:text="雙倍蛋"
+                            android:text="@string/double_egg"
                             android:textColor="#424040"
-                            android:textSize="13dp"
+                            android:textSize="13sp"
                             android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -95,19 +95,20 @@
                             app:layout_constraintVertical_bias="0.0" />
 
                         <TextView
-                            android:id="@+id/tv_extramoney"
+                            android:id="@+id/tv_extramoney_1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="249dp"
+                            android:layout_marginStart="220dp"
                             android:layout_marginTop="16dp"
                             android:layout_marginEnd="32dp"
                             android:layout_marginBottom="16dp"
-                            android:text="+$10"
+                            android:fontFamily="@font/genjyuugothic_bold"
+                            android:text="@string/price_plus_ten"
                             android:textColor="#424040"
                             android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/checkBox"
+                            app:layout_constraintStart_toEndOf="@+id/cb_egg"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintVertical_bias="0.0" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -128,9 +129,9 @@
                             android:layout_width="100dp"
                             android:layout_height="51dp"
                             android:layout_marginStart="24dp"
-                            android:text="雙倍配料"
+                            android:text="@string/double_ingredients"
                             android:textColor="#424040"
-                            android:textSize="13dp"
+                            android:textSize="13sp"
                             android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -138,19 +139,20 @@
                             app:layout_constraintVertical_bias="0.0" />
 
                         <TextView
-                            android:id="@+id/tv_extramoney"
+                            android:id="@+id/tv_extramoney_2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="249dp"
+                            android:layout_marginStart="220dp"
                             android:layout_marginTop="16dp"
                             android:layout_marginEnd="32dp"
                             android:layout_marginBottom="16dp"
-                            android:text="+$10"
+                            android:fontFamily="@font/genjyuugothic_bold"
+                            android:text="@string/price_plus_ten"
                             android:textColor="#424040"
                             android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/checkBox"
+                            app:layout_constraintStart_toEndOf="@+id/cb_ingredients"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintVertical_bias="0.0" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -170,9 +172,9 @@
                             android:layout_width="100dp"
                             android:layout_height="51dp"
                             android:layout_marginStart="24dp"
-                            android:text="雙倍蔥"
+                            android:text="@string/double_onion"
                             android:textColor="#424040"
-                            android:textSize="13dp"
+                            android:textSize="13sp"
                             android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -180,19 +182,20 @@
                             app:layout_constraintVertical_bias="0.0" />
 
                         <TextView
-                            android:id="@+id/tv_extramoney"
+                            android:id="@+id/tv_extramoney_3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="249dp"
+                            android:layout_marginStart="220dp"
                             android:layout_marginTop="16dp"
                             android:layout_marginEnd="32dp"
                             android:layout_marginBottom="16dp"
-                            android:text="+$10"
+                            android:fontFamily="@font/genjyuugothic_bold"
+                            android:text="@string/price_plus_ten"
                             android:textColor="#424040"
                             android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/checkBox"
+                            app:layout_constraintStart_toEndOf="@+id/cb_onion"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintVertical_bias="0.0" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -212,18 +215,23 @@
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="25dp"
                     android:layout_marginVertical="10dp"
-                    android:text="備註"
+                    android:fontFamily="@font/genjyuugothic_bold"
+                    android:text="@string/note"
                     android:textColor="#000000"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/et_note"
-                    android:layout_width="350dp"
+                    android:layout_width="360dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:autofillHints=""
+                    android:background="@drawable/note_edittextbackground"
                     android:ems="10"
-                    android:hint="e.g. 蛋餅煎的焦一點,不要加蔥"
+                    android:fontFamily="@font/genjyuugothic_bold"
+                    android:hint="@string/note_hint"
                     android:inputType="text" />
 
             </LinearLayout>
@@ -241,15 +249,17 @@
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="25dp"
                     android:layout_marginVertical="10dp"
-                    android:text="數量"
+                    android:text="@string/amount"
                     android:textColor="#000000"
-                    android:textSize="15dp"
-                    android:textStyle="bold"  />
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="359dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/edittextbackground"
                     android:orientation="horizontal">
 
                     <Button
@@ -258,20 +268,21 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:backgroundTint="#00FFFFFF"
-                        android:text="-"
+                        android:text="@string/sub"
                         android:textColor="#000000"
-                        android:textSize="20dp" />
+                        android:textSize="20sp" />
 
                     <TextView
-                        android:id="@+id/tv_amount"
+                        android:id="@+id/tv_amount_number"
                         android:layout_width="123dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:text="0"
+                        android:fontFamily="@font/genjyuugothic_bold"
+                        android:text="@string/amount_number"
                         android:textAlignment="center"
                         android:textColor="#000000"
-                        android:textSize="18dp" />
+                        android:textSize="18sp" />
 
                     <Button
                         android:id="@+id/btn_add"
@@ -279,43 +290,57 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:backgroundTint="#00FFFFFF"
-                        android:text="+"
+                        android:text="@string/add"
                         android:textColor="#000000"
-                        android:textSize="20dp" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:background="#FFFFFF"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
-                    android:backgroundTint="#FFFFFF"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textView8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="TextView" />
-
-                    <Button
-                        android:id="@+id/button4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Button" />
+                        android:textSize="20sp" />
                 </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_total"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="50dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/genjyuugothic_bold"
+                android:gravity="center"
+                android:text="@string/total_price"
+                android:textColor="#000000"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/btn_addToCart"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="40dp"
+                android:backgroundTint="#FFCC00"
+                android:fontFamily="@font/genjyuugothic_bold"
+                android:text="@string/add_to_cart"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:cornerRadius="15dp" />
+        </LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
