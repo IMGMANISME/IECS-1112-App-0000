@@ -16,7 +16,7 @@
         android:layout_marginTop="540dp"
         android:layout_marginEnd="48dp"
         android:backgroundTint="#FFCC00"
-        android:text="開始"
+        android:text="@string/start"
         android:textSize="22sp"
         android:textStyle="bold"
         app:cornerRadius="15dp"
