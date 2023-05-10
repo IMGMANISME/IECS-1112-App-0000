@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CFCCCC"
+    android:background="@drawable/background_grey"
     tools:context=".DetailImformationActivity">
 
     <ScrollView
         android:id="@+id/sv_detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/background_grey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -190,7 +189,7 @@
                             android:layout_marginEnd="32dp"
                             android:layout_marginBottom="16dp"
                             android:fontFamily="@font/genjyuugothic_bold"
-                            android:text="@string/price_plus_ten"
+                            android:text="@string/price_plus_five"
                             android:textColor="#424040"
                             android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -232,16 +231,16 @@
                         android:id="@+id/et_note"
                         android:layout_width="350dp"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="5dp"
                         android:autofillHints=""
                         android:background="@null"
                         android:ems="10"
                         android:fontFamily="@font/genjyuugothic_bold"
                         android:hint="@string/note_hint"
-                        android:textColorHint="#BFBFBF"
                         android:inputType="text"
                         android:textColor="#000000"
+                        android:textColorHint="#BFBFBF"
                         app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -341,21 +340,35 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/tv_total"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:id="@+id/tv_money"
+                android:layout_width="10dp"
+                android:layout_height="80dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="30dp"
-                android:layout_marginEnd="50dp"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/genjyuugothic_bold"
-                android:gravity="center"
+                android:gravity="center|right"
+                android:text="$"
+                android:textColor="#000000"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/tv_total"
+                android:layout_width="50dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="30dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/genjyuugothic_bold"
+                android:gravity="center|left"
                 android:text="@string/total_price"
                 android:textColor="#000000"
                 android:textSize="25sp" />
 
             <Button
-                android:id="@+id/btn_addToCart"
+                android:id="@+id/btn_add_to_cart"
                 android:layout_width="160dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
