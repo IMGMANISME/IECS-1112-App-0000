@@ -16,4 +16,7 @@
     <string name="sub">-</string>
     <string name="add_to_cart">加入購物車</string>
     <string name="total_price">35</string>
+    <string name="profile">profile</string>
+    <string name="user_name">GMAN</string>
+    <string name="user_location">臺灣，臺中市</string>
 </resources>
