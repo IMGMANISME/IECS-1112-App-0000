@@ -21,6 +21,15 @@
             android:name=".OrderActivity"
             android:exported="false" />
         <activity
+            android:name=".MenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailImformationActivity"
+            android:exported="false" />
+        <activity
             android:name=".RegisActivity"
             android:exported="false" />
         <activity
@@ -31,6 +40,9 @@
             android:exported="false" />
         <activity
             android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PersonalProfileActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

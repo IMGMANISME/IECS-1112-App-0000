@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PersonalProfileActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_top_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/search_background" />
+
+        <TextView
+            android:id="@+id/tv_page_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/profile"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bottom_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_personal_profile"
+                android:layout_width="140dp"
+                android:layout_height="115dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/personal_profile_image" />
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/genjyuugothic_bold"
+                android:gravity="center"
+                android:text="@string/user_name"
+                android:textColor="#000000"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/tv_user_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/genjyuugothic_bold"
+                android:gravity="center"
+                android:keyboardNavigationCluster="false"
+                android:text="@string/user_location"
+                android:textColor="#777575"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/ib_profile_detail"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:backgroundTint="#00000000"
+                android:scaleType="fitXY"
+                android:scaleX="1.1"
+                android:scaleY="1.1"
+                app:srcCompat="@drawable/profile_button" />
+
+            <ImageButton
+                android:id="@+id/ib_phone_detail"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:backgroundTint="#00000000"
+                android:scaleType="fitXY"
+                android:scaleX="1.1"
+                android:scaleY="1.1"
+                app:srcCompat="@drawable/phone" />
+
+            <ImageButton
+                android:id="@+id/ib_coupon_detail"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:backgroundTint="#00000000"
+                android:scaleType="fitXY"
+                android:scaleX="1.1"
+                android:scaleY="1.1"
+                app:srcCompat="@drawable/coupon" />
+
+            <ImageButton
+                android:id="@+id/ib_notification_detail"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:backgroundTint="#00000000"
+                android:scaleType="fitXY"
+                android:scaleX="1.1"
+                android:scaleY="1.1"
+                app:srcCompat="@drawable/notification" />
+
+            <ImageButton
+                android:id="@+id/ib_about_us_detail"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:backgroundTint="#00000000"
+                android:scaleType="fitXY"
+                android:scaleX="1.1"
+                android:scaleY="1.1"
+                app:srcCompat="@drawable/about_us" />
+
+            <ImageButton
+                android:id="@+id/ib_logout"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:backgroundTint="#00000000"
+                android:scaleType="fitXY"
+                android:scaleX="1.1"
+                android:scaleY="1.1"
+                app:srcCompat="@drawable/logout" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="95dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2">
+
+        <ImageButton
+            android:id="@+id/ib_home"
+            android:layout_width="103dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#00000000"
+            android:scaleType="fitXY"
+            android:scaleX="1.1"
+            android:scaleY="1"
+            app:srcCompat="@drawable/home" />
+
+        <ImageButton
+            android:id="@+id/ib_order"
+            android:layout_width="103dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#00000000"
+            android:scaleType="fitXY"
+            android:scaleX="1.1"
+            android:scaleY="1"
+            app:srcCompat="@drawable/order" />
+
+        <ImageButton
+            android:id="@+id/ib_cart"
+            android:layout_width="103dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#00000000"
+            android:scaleType="fitXY"
+            android:scaleX="1.1"
+            android:scaleY="1"
+            app:srcCompat="@drawable/cart" />
+
+        <ImageButton
+            android:id="@+id/ib_profile"
+            android:layout_width="103dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#00000000"
+            android:scaleType="fitXY"
+            android:scaleX="1.1"
+            android:scaleY="1"
+            app:srcCompat="@drawable/profile" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
