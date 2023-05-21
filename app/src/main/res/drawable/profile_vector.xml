@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Vector -->
+    <View
+        android:id="@+id/vector"
+        android:layout_width="68.67dp"
+        android:layout_height="0dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="102.33dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/vector"
+        android:elevation="4dp" />
+
+</selector>
+
