@@ -4,18 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.annotation.SuppressLint;
-import android.content.Context;
-import android.media.Image;
 import android.os.Bundle;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.TextView;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import Adapter.CategoryAdaptor;
+import Adapter.CategoryAdapter;
 import Domain.CategoryDomain;
 
 public class HomeActivity extends AppCompatActivity {
@@ -29,17 +24,20 @@ public class HomeActivity extends AppCompatActivity {
       getSupportActionBar().hide();
     }
 
-    recyclerView = findViewById(R.id.recycle);
+    recyclerView = findViewById(R.id.rv_meal);
 
-    LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+    LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+    layoutManager.setOrientation(RecyclerView.HORIZONTAL);
+    recyclerView.setOverScrollMode(View.OVER_SCROLL_NEVER);
     recyclerView.setLayoutManager(layoutManager);
 
-    ArrayList<CategoryDomain> category = new ArrayList<>();
-    category.add(new CategoryDomain("Meal A","$ 100","meala"));
-    category.add(new CategoryDomain("Meal B","$ 250","mealb"));
-
-    CategoryAdaptor adaptor = new CategoryAdaptor(this, category);
-    recyclerView.setAdapter(recyclerView.getAdapter());
+    recyclerView.setHasFixedSize(true);
+    List<CategoryDomain> itemlist = new ArrayList<>();
+    itemlist.add(new CategoryDomain("MealA","$100",R.drawable.meala));
+    itemlist.add(new CategoryDomain("MealB","$200",R.drawable.mealb));
+    itemlist.add(new CategoryDomain("MealC","$300",R.drawable.meala));
+    itemlist.add(new CategoryDomain("MealD","$400",R.drawable.mealb));
+    recyclerView.setAdapter(new CategoryAdapter(itemlist));
 
   }
 }
