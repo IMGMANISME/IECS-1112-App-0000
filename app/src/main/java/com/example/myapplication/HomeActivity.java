@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +25,8 @@ public class HomeActivity extends AppCompatActivity {
   private ImageView iv_cart;
   private ImageView iv_profile;
 
+  private Button btn_add;
+
   @SuppressLint({"WrongViewCast", "MissingInflatedId"})
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,7 @@ public class HomeActivity extends AppCompatActivity {
     iv_order = findViewById(R.id.iv_order);
     iv_cart = findViewById(R.id.iv_cart);
     iv_profile = findViewById(R.id.iv_profile);
+    btn_add = findViewById(R.id.btn_meal_add);
 
     pageTransform();
 
@@ -64,7 +66,7 @@ public class HomeActivity extends AppCompatActivity {
     iv_home.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-        Intent intent = new Intent(HomeActivity.this,MainActivity.class);
+        Intent intent = new Intent(HomeActivity.this,HomeActivity.class);
         startActivity(intent);
       }
     });
