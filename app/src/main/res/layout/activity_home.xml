@@ -116,7 +116,7 @@
             android:id="@+id/imageView13"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/coupon" />
+            app:srcCompat="@drawable/coupon_2" />
 
         <TextView
             android:id="@+id/textView6"
@@ -217,6 +217,7 @@
                 android:layout_marginLeft="0dp"
                 android:layout_marginTop="15dp"
                 app:srcCompat="@drawable/profile2" />
+
         </FrameLayout>
 
         <FrameLayout
@@ -249,6 +250,8 @@
                 android:layout_marginLeft="0dp"
                 android:layout_marginTop="15dp"
                 app:srcCompat="@drawable/cart2" />
+
+
         </FrameLayout>
 
         <FrameLayout
@@ -281,6 +284,7 @@
                 android:layout_marginLeft="0dp"
                 android:layout_marginTop="15dp"
                 app:srcCompat="@drawable/order2" />
+
         </FrameLayout>
 
         <FrameLayout
@@ -312,6 +316,7 @@
                 android:layout_marginLeft="0dp"
                 android:layout_marginTop="15dp"
                 app:srcCompat="@drawable/home2" />
+
 
         </FrameLayout>
 

@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class PersonalProfileActivity extends AppCompatActivity {
 
-    private Boolean isLogin = false;
+    private Boolean isLogin = true;
     private String userName = "GMAN";
     private String userLocation = "臺灣，臺中市";
     private ImageView ivPersonalProfile;
@@ -40,7 +40,6 @@ public class PersonalProfileActivity extends AppCompatActivity {
         tvUserName = findViewById(R.id.tv_user_name);
         tvUserLocation = findViewById(R.id.tv_user_location);
         ibProfileDetail = findViewById(R.id.ib_profile_detail);
-        ibPhoneDetail = findViewById(R.id.ib_phone_detail);
         ibCouponDetail = findViewById(R.id.ib_coupon_detail);
         ibNotificationDetail = findViewById(R.id.ib_notification_detail);
         ibAboutUsDetail = findViewById(R.id.ib_about_us_detail);
@@ -64,12 +63,6 @@ public class PersonalProfileActivity extends AppCompatActivity {
                 if (view.getId() == R.id.ib_profile_detail) {
                     if (isLogin){
                         Toast.makeText(PersonalProfileActivity.this, "個人資料", Toast.LENGTH_SHORT).show();
-                    }else{
-                        Toast.makeText(PersonalProfileActivity.this, "請先登入", Toast.LENGTH_SHORT).show();
-                    }
-                }else if (view.getId() == R.id.ib_phone_detail) {
-                    if (isLogin){
-                        Toast.makeText(PersonalProfileActivity.this, "電話", Toast.LENGTH_SHORT).show();
                     }else{
                         Toast.makeText(PersonalProfileActivity.this, "請先登入", Toast.LENGTH_SHORT).show();
                     }
@@ -111,7 +104,6 @@ public class PersonalProfileActivity extends AppCompatActivity {
             }
         };
         ibProfileDetail.setOnClickListener(listener);
-        ibPhoneDetail.setOnClickListener(listener);
         ibCouponDetail.setOnClickListener(listener);
         ibNotificationDetail.setOnClickListener(listener);
         ibAboutUsDetail.setOnClickListener(listener);
