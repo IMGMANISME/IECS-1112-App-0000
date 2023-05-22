@@ -33,16 +33,16 @@
             android:name=".RegisActivity"
             android:exported="false" />
         <activity
-            android:name=".GetStartActivity"
+            android:name=".HomeActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".PersonalProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".PersonalProfileActivity"
+            android:name=".GetStartActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

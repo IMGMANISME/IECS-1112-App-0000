@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +19,7 @@ public class PersonalProfileActivity extends AppCompatActivity {
     private ImageView ivPersonalProfile;
     private TextView tvUserName;
     private TextView tvUserLocation;
+    private ScrollView sv2;
     private ImageButton ibProfileDetail;
     private ImageButton ibPhoneDetail;
     private ImageButton ibCouponDetail;
@@ -39,6 +41,7 @@ public class PersonalProfileActivity extends AppCompatActivity {
         ivPersonalProfile = findViewById(R.id.iv_personal_profile);
         tvUserName = findViewById(R.id.tv_user_name);
         tvUserLocation = findViewById(R.id.tv_user_location);
+        sv2 = findViewById(R.id.scrollView2);
         ibProfileDetail = findViewById(R.id.ib_profile_detail);
         ibCouponDetail = findViewById(R.id.ib_coupon_detail);
         ibNotificationDetail = findViewById(R.id.ib_notification_detail);
@@ -48,6 +51,8 @@ public class PersonalProfileActivity extends AppCompatActivity {
         ibOder = findViewById(R.id.ib_order);
         ibCart = findViewById(R.id.ib_cart);
         ibProfile = findViewById(R.id.ib_profile);
+
+        sv2.setOverScrollMode(View.OVER_SCROLL_NEVER);
 
         if (isLogin) {
             tvUserName.setText(userName);
@@ -92,7 +97,7 @@ public class PersonalProfileActivity extends AppCompatActivity {
                     }
                 }else if (view.getId() == R.id.ib_home) {
                     Toast.makeText(PersonalProfileActivity.this, "跳到首頁", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(PersonalProfileActivity.this, MainActivity.class);
+                    Intent intent = new Intent(PersonalProfileActivity.this, HomeActivity.class);
                     startActivity(intent);
                 }else if (view.getId() == R.id.ib_order) {
                     Toast.makeText(PersonalProfileActivity.this, "跳到訂單頁面", Toast.LENGTH_SHORT).show();
