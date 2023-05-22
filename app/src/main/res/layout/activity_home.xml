@@ -46,7 +46,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.078"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_start" />
 
     <TextView
         android:id="@+id/textView5"
@@ -62,7 +62,7 @@
         app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 
     <TextView
-        android:id="@+id/button"
+        android:id="@+id/iv_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -85,10 +85,10 @@
         android:layout_height="20dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
-        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/iv_start"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toTopOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/iv_start"
+        app:layout_constraintTop_toTopOf="@+id/iv_start"
         app:srcCompat="@drawable/vector" />
 
     <ImageView
@@ -193,7 +193,7 @@
             android:layout_marginLeft="309dp">
 
             <ImageView
-                android:id="@+id/imageView7"
+                android:id="@+id/iv_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/bottom" />
@@ -216,7 +216,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="0dp"
                 android:layout_marginTop="15dp"
-                app:srcCompat="@drawable/profile" />
+                app:srcCompat="@drawable/profile2" />
         </FrameLayout>
 
         <FrameLayout
@@ -225,7 +225,7 @@
             android:layout_marginLeft="206dp">
 
             <ImageView
-                android:id="@+id/imageView7"
+                android:id="@+id/iv_cart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/bottom" />
@@ -248,7 +248,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="0dp"
                 android:layout_marginTop="15dp"
-                app:srcCompat="@drawable/cart" />
+                app:srcCompat="@drawable/cart2" />
         </FrameLayout>
 
         <FrameLayout
@@ -257,7 +257,7 @@
             android:layout_marginLeft="103dp">
 
             <ImageView
-                android:id="@+id/imageView7"
+                android:id="@+id/iv_order"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/bottom" />
@@ -280,7 +280,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="0dp"
                 android:layout_marginTop="15dp"
-                app:srcCompat="@drawable/order" />
+                app:srcCompat="@drawable/order2" />
         </FrameLayout>
 
         <FrameLayout
@@ -288,7 +288,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView7"
+                android:id="@+id/iv_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/bottom" />
@@ -311,7 +311,8 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="0dp"
                 android:layout_marginTop="15dp"
-                app:srcCompat="@drawable/home" />
+                app:srcCompat="@drawable/home2" />
+
         </FrameLayout>
 
     </FrameLayout>

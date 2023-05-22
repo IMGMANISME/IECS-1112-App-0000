@@ -4,8 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +20,13 @@ import Domain.CategoryDomain;
 
 public class HomeActivity extends AppCompatActivity {
   private RecyclerView recyclerView;
+  // private ImageView iv_start;
+  private ImageView iv_home;
+  private ImageView iv_order;
+  private ImageView iv_cart;
+  private ImageView iv_profile;
 
+  @SuppressLint({"WrongViewCast", "MissingInflatedId"})
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -23,6 +34,14 @@ public class HomeActivity extends AppCompatActivity {
     if(getSupportActionBar() != null){
       getSupportActionBar().hide();
     }
+
+    // iv_start = findViewById(R.id.iv_start);
+    iv_home = findViewById(R.id.iv_home);
+    iv_order = findViewById(R.id.iv_order);
+    iv_cart = findViewById(R.id.iv_cart);
+    iv_profile = findViewById(R.id.iv_profile);
+
+    pageTransform();
 
     recyclerView = findViewById(R.id.rv_meal);
 
@@ -40,4 +59,39 @@ public class HomeActivity extends AppCompatActivity {
     recyclerView.setAdapter(new CategoryAdapter(itemlist));
 
   }
+
+  public void pageTransform(){
+    iv_home.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Intent intent = new Intent(HomeActivity.this,MainActivity.class);
+        startActivity(intent);
+      }
+    });
+
+    iv_order.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Intent intent = new Intent(HomeActivity.this,OrderActivity.class);
+        startActivity(intent);
+      }
+    });
+
+    iv_cart.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Intent intent = new Intent(HomeActivity.this,CartActivity.class);
+        startActivity(intent);
+      }
+    });
+
+    iv_profile.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Intent intent = new Intent(HomeActivity.this,PersonalProfileActivity.class);
+        startActivity(intent);
+      }
+    });
+  }
+
 }
