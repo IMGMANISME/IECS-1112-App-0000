@@ -1,9 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     tools:context=".OrderActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/iv_background"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        app:srcCompat="@drawable/search_background2" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Order"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_background"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/genjyuugothic_medium"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="#FFCC00"
+        app:tabSelectedTextColor="#FFCC00"
+        app:tabTextColor="#AA000000">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:text="已確認" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:text="處理中" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:text="待取餐" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:text="已完成" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tab_layout"
+        android:layout_marginTop="0dp" />
+
+</RelativeLayout>
