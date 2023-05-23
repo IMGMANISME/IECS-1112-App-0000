@@ -65,7 +65,7 @@
                 android:id="@+id/btn_meal_add"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:layout_marginLeft="40dp"
+                android:layout_marginLeft="50dp"
                 android:layout_marginTop="0dp"
                 android:background="@drawable/plus" />
 
