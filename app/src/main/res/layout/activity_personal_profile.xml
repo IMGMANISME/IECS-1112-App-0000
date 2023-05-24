@@ -16,9 +16,9 @@
 
         <ImageView
             android:id="@+id/iv_top_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/search_background" />
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            app:srcCompat="@drawable/search_background2" />
 
         <TextView
             android:id="@+id/tv_page_title"
@@ -111,16 +111,6 @@
                 android:scaleX="1.1"
                 android:scaleY="1.1"
                 app:srcCompat="@drawable/profile_button" />
-
-            <ImageButton
-                android:id="@+id/ib_phone_detail"
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:backgroundTint="#00000000"
-                android:scaleType="fitXY"
-                android:scaleX="1.1"
-                android:scaleY="1.1"
-                app:srcCompat="@drawable/phone" />
 
             <ImageButton
                 android:id="@+id/ib_coupon_detail"

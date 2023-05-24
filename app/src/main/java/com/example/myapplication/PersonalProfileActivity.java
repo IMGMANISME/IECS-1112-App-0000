@@ -7,17 +7,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class PersonalProfileActivity extends AppCompatActivity {
 
-    private Boolean isLogin = false;
+    private Boolean isLogin = true;
     private String userName = "GMAN";
     private String userLocation = "臺灣，臺中市";
     private ImageView ivPersonalProfile;
     private TextView tvUserName;
     private TextView tvUserLocation;
+    private ScrollView sv2;
     private ImageButton ibProfileDetail;
     private ImageButton ibPhoneDetail;
     private ImageButton ibCouponDetail;
@@ -39,8 +41,8 @@ public class PersonalProfileActivity extends AppCompatActivity {
         ivPersonalProfile = findViewById(R.id.iv_personal_profile);
         tvUserName = findViewById(R.id.tv_user_name);
         tvUserLocation = findViewById(R.id.tv_user_location);
+        sv2 = findViewById(R.id.scrollView2);
         ibProfileDetail = findViewById(R.id.ib_profile_detail);
-        ibPhoneDetail = findViewById(R.id.ib_phone_detail);
         ibCouponDetail = findViewById(R.id.ib_coupon_detail);
         ibNotificationDetail = findViewById(R.id.ib_notification_detail);
         ibAboutUsDetail = findViewById(R.id.ib_about_us_detail);
@@ -49,6 +51,8 @@ public class PersonalProfileActivity extends AppCompatActivity {
         ibOder = findViewById(R.id.ib_order);
         ibCart = findViewById(R.id.ib_cart);
         ibProfile = findViewById(R.id.ib_profile);
+
+        sv2.setOverScrollMode(View.OVER_SCROLL_NEVER);
 
         if (isLogin) {
             tvUserName.setText(userName);
@@ -64,12 +68,6 @@ public class PersonalProfileActivity extends AppCompatActivity {
                 if (view.getId() == R.id.ib_profile_detail) {
                     if (isLogin){
                         Toast.makeText(PersonalProfileActivity.this, "個人資料", Toast.LENGTH_SHORT).show();
-                    }else{
-                        Toast.makeText(PersonalProfileActivity.this, "請先登入", Toast.LENGTH_SHORT).show();
-                    }
-                }else if (view.getId() == R.id.ib_phone_detail) {
-                    if (isLogin){
-                        Toast.makeText(PersonalProfileActivity.this, "電話", Toast.LENGTH_SHORT).show();
                     }else{
                         Toast.makeText(PersonalProfileActivity.this, "請先登入", Toast.LENGTH_SHORT).show();
                     }
@@ -99,7 +97,7 @@ public class PersonalProfileActivity extends AppCompatActivity {
                     }
                 }else if (view.getId() == R.id.ib_home) {
                     Toast.makeText(PersonalProfileActivity.this, "跳到首頁", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(PersonalProfileActivity.this, MainActivity.class);
+                    Intent intent = new Intent(PersonalProfileActivity.this, HomeActivity.class);
                     startActivity(intent);
                 }else if (view.getId() == R.id.ib_order) {
                     Toast.makeText(PersonalProfileActivity.this, "跳到訂單頁面", Toast.LENGTH_SHORT).show();
@@ -111,7 +109,6 @@ public class PersonalProfileActivity extends AppCompatActivity {
             }
         };
         ibProfileDetail.setOnClickListener(listener);
-        ibPhoneDetail.setOnClickListener(listener);
         ibCouponDetail.setOnClickListener(listener);
         ibNotificationDetail.setOnClickListener(listener);
         ibAboutUsDetail.setOnClickListener(listener);
