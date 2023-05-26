@@ -26,7 +26,7 @@ public class GetStartActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(view.getId() == R.id.btn_start){
-                    Intent intent = new Intent(GetStartActivity.this, HomeActivity.class);
+                    Intent intent = new Intent(GetStartActivity.this, SignInActivity.class);
                     startActivity(intent);
                     Toast.makeText(GetStartActivity.this, "開始點餐", Toast.LENGTH_SHORT).show();
                 }

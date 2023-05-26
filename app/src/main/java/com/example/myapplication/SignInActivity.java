@@ -48,7 +48,7 @@ public class SignInActivity extends AppCompatActivity {
                     String sharedPassword = sharedPreferences.getString("password","");
                     if (username.equals(sharedUserName) && password.equals(sharedPassword)) {
                         sharedPreferences.edit().putBoolean("signed_in", true).apply();
-                        Intent intent = new Intent(SignInActivity.this,MainActivity.class);
+                        Intent intent = new Intent(SignInActivity.this,HomeActivity.class);
                         startActivity(intent);
                     }else {
                         Toast.makeText(SignInActivity.this, "Invalid phone number or password", Toast.LENGTH_SHORT).show();
