@@ -40,7 +40,7 @@ public class SignInActivity extends AppCompatActivity {
                     String password = etPassword.getText().toString();
 
                     if(username.isEmpty() || password.isEmpty()){
-                        Toast.makeText(SignInActivity.this, "Please enter phone number and  password", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SignInActivity.this, "請輸入手機號碼和密碼", Toast.LENGTH_SHORT).show();
                         return;
                     }
                     SharedPreferences sharedPreferences = getSharedPreferences("user_info", MODE_PRIVATE);
@@ -51,7 +51,7 @@ public class SignInActivity extends AppCompatActivity {
                         Intent intent = new Intent(SignInActivity.this,HomeActivity.class);
                         startActivity(intent);
                     }else {
-                        Toast.makeText(SignInActivity.this, "Invalid phone number or password", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SignInActivity.this, "無效的手機號碼或密碼", Toast.LENGTH_SHORT).show();
                     }
                 } else if (view.getId() == R.id.tv_signup) {
                     Intent intent = new Intent(SignInActivity.this,RegisActivity.class);
