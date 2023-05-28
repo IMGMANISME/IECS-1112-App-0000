@@ -10,10 +10,10 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="64dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/search_background" />
+        app:srcCompat="@drawable/search_background2" />
 
     <TextView
         android:id="@+id/tv_page_title"
