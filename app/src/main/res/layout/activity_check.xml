@@ -6,10 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".CheckActivity">
 
+    <android.widget.Button
+        android:id="@+id/tv_checkout_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginTop="585dp"
+        android:layout_weight="1"
+        android:background="@drawable/yellow_rec"
+        android:text="Button"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -34,24 +50,58 @@
 
         </FrameLayout>
 
-        <FrameLayout
+        <ScrollView
+            android:id="@+id/rv_check_scroll"
             android:layout_width="match_parent"
-            android:layout_height="666dp">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="100dp"
+            android:layout_weight="8">
 
-            <ScrollView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="28dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/subtotal" />
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:layout_marginLeft="28dp"
+                        android:fontFamily="@font/genjyuugothic_medium"
+                        android:text="訂單摘要"
+                        android:textColor="#CC000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_check_meal_detail"
+                    android:layout_width="353dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:nestedScrollingEnabled="true">
+
+                </androidx.recyclerview.widget.RecyclerView>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
                     android:orientation="vertical">
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:layout_width="match_parent"
-                        android:layout_height="288dp">
-
-                    </androidx.recyclerview.widget.RecyclerView>
 
                     <FrameLayout
                         android:layout_width="match_parent"
@@ -72,6 +122,7 @@
                                 android:id="@+id/imageView12"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
                                 android:layout_weight="1"
                                 app:srcCompat="@drawable/vector_icon_2" />
 
@@ -79,17 +130,27 @@
                                 android:id="@+id/textView10"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginTop="18dp"
                                 android:layout_weight="1"
+                                android:fontFamily="@font/genjyuugothic_medium"
                                 android:text="優惠券" />
 
                             <ImageView
                                 android:id="@+id/imageView14"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
                                 android:layout_weight="1"
                                 app:srcCompat="@drawable/vector_2" />
                         </LinearLayout>
                     </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="28dp"
+                    android:orientation="vertical">
 
                     <FrameLayout
                         android:layout_width="match_parent"
@@ -112,62 +173,73 @@
                                 android:id="@+id/textView12"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="55dp"
+                                android:layout_marginTop="20dp"
                                 android:layout_weight="1"
-                                android:text="TextView" />
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="Subtotal"
+                                android:textColor="#CC000000" />
 
                             <TextView
-                                android:id="@+id/textView11"
+                                android:id="@+id/tv_check_subtotal"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="55dp"
                                 android:layout_weight="1"
-                                android:text="TextView" />
+                                android:gravity="right"
+                                android:text="TextView"
+                                android:textColor="#CC000000" />
                         </LinearLayout>
                     </FrameLayout>
 
                     <FrameLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center">
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5dp">
 
                         <ImageView
-                            android:id="@+id/imageView15"
+                            android:id="@+id/imageView20"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
+                            android:layout_gravity="center|top"
                             app:srcCompat="@drawable/discount" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="57dp"
                             android:orientation="horizontal">
 
                             <TextView
-                                android:id="@+id/textView14"
-                                android:layout_width="match_parent"
+                                android:id="@+id/tv_check_meal_name_botm"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="55dp"
+                                android:layout_marginTop="20dp"
                                 android:layout_weight="1"
-                                android:text="TextView" />
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="Discount"
+                                android:textColor="#CC000000" />
 
                             <TextView
-                                android:id="@+id/textView13"
-                                android:layout_width="match_parent"
+                                android:id="@+id/tv_check_discount"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="55dp"
                                 android:layout_weight="1"
-                                android:text="TextView" />
+                                android:gravity="right"
+                                android:text="TextView"
+                                android:textColor="#CC000000" />
                         </LinearLayout>
+
                     </FrameLayout>
 
                 </LinearLayout>
-            </ScrollView>
 
-            <Button
-                android:id="@+id/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|center_horizontal"
-                android:text="Button" />
-
-        </FrameLayout>
+            </LinearLayout>
+        </ScrollView>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
