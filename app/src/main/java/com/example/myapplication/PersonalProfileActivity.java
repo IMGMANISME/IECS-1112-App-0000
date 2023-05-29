@@ -92,6 +92,8 @@ public class PersonalProfileActivity extends AppCompatActivity {
                 }else if (view.getId() == R.id.ib_logout) {
                     if (isLogin){
                         Toast.makeText(PersonalProfileActivity.this, "登出", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(PersonalProfileActivity.this, SignInActivity.class);
+                        startActivity(intent);
                     }else{
                         Toast.makeText(PersonalProfileActivity.this, "尚未登入", Toast.LENGTH_SHORT).show();
                     }
