@@ -86,13 +86,13 @@
             android:layout_marginLeft="309dp">
 
             <ImageView
-                android:id="@+id/iv_profile"
+                android:id="@+id/menu_iv_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/bottom" />
 
             <TextView
-                android:id="@+id/tv_profile"
+                android:id="@+id/menu_tv_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -103,7 +103,7 @@
                 android:textSize="12sp" />
 
             <ImageView
-                android:id="@+id/iv_profile_back"
+                android:id="@+id/menu_iv_profile_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -119,13 +119,13 @@
             android:layout_marginLeft="206dp">
 
             <ImageView
-                android:id="@+id/iv_cart"
+                android:id="@+id/menu_iv_cart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/bottom" />
 
             <TextView
-                android:id="@+id/tv_cart"
+                android:id="@+id/menu_tv_cart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -136,7 +136,7 @@
                 android:textSize="12sp" />
 
             <ImageView
-                android:id="@+id/iv_cart_back"
+                android:id="@+id/menu_iv_cart_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -153,13 +153,13 @@
             android:layout_marginLeft="103dp">
 
             <ImageView
-                android:id="@+id/iv_order"
+                android:id="@+id/menu_iv_order"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/bottom" />
 
             <TextView
-                android:id="@+id/tv_order"
+                android:id="@+id/menu_tv_order"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -170,7 +170,7 @@
                 android:textSize="12sp" />
 
             <ImageView
-                android:id="@+id/iv_order_back"
+                android:id="@+id/menu_iv_order_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -185,13 +185,13 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/iv_home"
+                android:id="@+id/menu_iv_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/bottom" />
 
             <TextView
-                android:id="@+id/tv_home"
+                android:id="@+id/menu_tv_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -202,7 +202,7 @@
                 android:textSize="12sp" />
 
             <ImageView
-                android:id="@+id/iv_home_back"
+                android:id="@+id/menu_iv_home_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"

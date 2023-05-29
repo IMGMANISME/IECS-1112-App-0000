@@ -79,14 +79,13 @@ public class DrinkFragment extends Fragment {
         menu_RecyclerView.setOverScrollMode(View.OVER_SCROLL_NEVER);
         menu_RecyclerView.setLayoutManager(layoutManager);
         drink_list = new ArrayList<>();
-        drink_list.add(new MenuDomain(R.drawable.chinese_omelet_1,"紅茶","$30"));
-        drink_list.add(new MenuDomain(R.drawable.chinese_omelet_2,"奶茶","$35"));
-        drink_list.add(new MenuDomain(R.drawable.chinese_omelet_3,"豆漿","$35"));
-        drink_list.add(new MenuDomain(R.drawable.chinese_omelet_4,"鮮奶茶","$35"));
-        drink_list.add(new MenuDomain(R.drawable.chinese_omelet_1,"咖啡","$30"));
-        drink_list.add(new MenuDomain(R.drawable.chinese_omelet_2,"可可","$35"));
-        drink_list.add(new MenuDomain(R.drawable.chinese_omelet_3,"起司蛋餅","$35"));
-        drink_list.add(new MenuDomain(R.drawable.chinese_omelet_4,"培根蛋餅","$35"));
+        drink_list.add(new MenuDomain(R.drawable.drink_01,"紅茶","$20"));
+        drink_list.add(new MenuDomain(R.drawable.drink_02,"奶茶","$25"));
+        drink_list.add(new MenuDomain(R.drawable.drink_03,"豆漿","$25"));
+        drink_list.add(new MenuDomain(R.drawable.drink_04,"鮮奶茶","$35"));
+        drink_list.add(new MenuDomain(R.drawable.drink_05,"咖啡","$35"));
+        drink_list.add(new MenuDomain(R.drawable.drink_06,"可可","$30"));
+
         menu_RecyclerView.setAdapter(new MenuAdapter(requireContext(),drink_list));
         // Inflate the layout for this fragment
         return view;
