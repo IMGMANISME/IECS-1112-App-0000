@@ -40,10 +40,10 @@ public class MenuActivity extends AppCompatActivity {
             getSupportActionBar().hide();
         }
 
-        iv_home = findViewById(R.id.iv_home);
-        iv_order = findViewById(R.id.iv_order);
-        iv_cart = findViewById(R.id.iv_cart);
-        iv_profile = findViewById(R.id.iv_profile);
+        iv_home = findViewById(R.id.menu_iv_home);
+        iv_order = findViewById(R.id.menu_iv_order);
+        iv_cart = findViewById(R.id.menu_iv_cart);
+        iv_profile = findViewById(R.id.menu_iv_profile);
 
         pageTransform();
 
