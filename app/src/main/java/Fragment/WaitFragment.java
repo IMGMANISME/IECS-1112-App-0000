@@ -81,12 +81,12 @@ public class WaitFragment extends Fragment {
 
         order_RecyclerView.setHasFixedSize(true);
         wait_order_list = new ArrayList<>();
-        wait_order_list.add(new OrderDomain(R.drawable.order_img_3,"2023/06/27","$170","已完成"));
-        wait_order_list.add(new OrderDomain(R.drawable.order_img_3,"2023/06/26","$175","已完成"));
-        wait_order_list.add(new OrderDomain(R.drawable.order_img_1,"2023/06/25","$100","已完成"));
-        wait_order_list.add(new OrderDomain(R.drawable.order_img_1,"2023/06/24","$160","已完成"));
-        wait_order_list.add(new OrderDomain(R.drawable.order_img_3,"2023/06/02","$130","已完成"));
-        wait_order_list.add(new OrderDomain(R.drawable.order_img_3,"2023/06/01","$260","已完成"));
+        wait_order_list.add(new OrderDomain(R.drawable.order_img_3,"2023/06/27","$170","待取餐"));
+        wait_order_list.add(new OrderDomain(R.drawable.order_img_3,"2023/06/26","$175","待取餐"));
+        wait_order_list.add(new OrderDomain(R.drawable.order_img_1,"2023/06/25","$100","待取餐"));
+        wait_order_list.add(new OrderDomain(R.drawable.order_img_1,"2023/06/24","$160","待取餐"));
+        wait_order_list.add(new OrderDomain(R.drawable.order_img_3,"2023/06/02","$130","待取餐"));
+        wait_order_list.add(new OrderDomain(R.drawable.order_img_3,"2023/06/01","$260","待取餐"));
         order_RecyclerView.setAdapter(new MyOrderAdapter(wait_order_list));
         // Inflate the layout for this fragment
         return view;
