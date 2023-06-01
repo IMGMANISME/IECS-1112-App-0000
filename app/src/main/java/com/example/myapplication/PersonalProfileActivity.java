@@ -92,19 +92,23 @@ public class PersonalProfileActivity extends AppCompatActivity {
                 }else if (view.getId() == R.id.ib_logout) {
                     if (isLogin){
                         Toast.makeText(PersonalProfileActivity.this, "登出", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(PersonalProfileActivity.this, SignInActivity.class);
+                        startActivity(intent);
                     }else{
                         Toast.makeText(PersonalProfileActivity.this, "尚未登入", Toast.LENGTH_SHORT).show();
                     }
                 }else if (view.getId() == R.id.ib_home) {
-                    Toast.makeText(PersonalProfileActivity.this, "跳到首頁", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(PersonalProfileActivity.this, HomeActivity.class);
                     startActivity(intent);
                 }else if (view.getId() == R.id.ib_order) {
-                    Toast.makeText(PersonalProfileActivity.this, "跳到訂單頁面", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(PersonalProfileActivity.this, OrderActivity.class);
+                    startActivity(intent);
                 } else if (view.getId() == R.id.ib_cart) {
-                    Toast.makeText(PersonalProfileActivity.this, "跳到購物車頁面", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(PersonalProfileActivity.this, CartActivity.class);
+                    startActivity(intent);
                 } else if (view.getId() == R.id.ib_profile) {
-                    Toast.makeText(PersonalProfileActivity.this, "跳到個人資料頁面", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(PersonalProfileActivity.this, PersonalProfileActivity.class);
+                    startActivity(intent);
                 }
             }
         };

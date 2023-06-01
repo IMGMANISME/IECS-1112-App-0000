@@ -24,6 +24,7 @@ public class HomeActivity extends AppCompatActivity {
   private ImageView iv_order;
   private ImageView iv_cart;
   private ImageView iv_profile;
+  private ImageView iv_start;
 
   private Button btn_add;
 
@@ -36,7 +37,7 @@ public class HomeActivity extends AppCompatActivity {
       getSupportActionBar().hide();
     }
 
-    // iv_start = findViewById(R.id.iv_start);
+    iv_start = findViewById(R.id.iv_start);
     iv_home = findViewById(R.id.iv_home);
     iv_order = findViewById(R.id.iv_order);
     iv_cart = findViewById(R.id.iv_cart);
@@ -63,6 +64,15 @@ public class HomeActivity extends AppCompatActivity {
   }
 
   public void pageTransform(){
+
+    iv_start.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Intent intent = new Intent(HomeActivity.this,MenuActivity.class);
+        startActivity(intent);
+      }
+    });
+
     iv_home.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {

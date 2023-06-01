@@ -39,7 +39,7 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:text="優惠活動"
         android:textColor="#000000"
         android:textSize="14sp"
@@ -61,33 +61,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 
-    <TextView
+    <ImageView
         android:id="@+id/iv_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:background="@drawable/image"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:gravity="left|center_vertical"
-        android:paddingStart="24dp"
-        android:text="開始點餐"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:srcCompat="@drawable/image" />
 
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="@+id/iv_start"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/iv_start"
         app:layout_constraintTop_toTopOf="@+id/iv_start"
         app:srcCompat="@drawable/vector" />
 
@@ -333,6 +324,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         app:layout_constraintVertical_bias="0.529" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="22dp"
+        android:fontFamily="@font/genjyuugothic_medium"
+        android:text="快速點餐"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/iv_start"
+        app:layout_constraintTop_toTopOf="@+id/iv_start" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
