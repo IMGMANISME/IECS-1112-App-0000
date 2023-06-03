@@ -114,7 +114,7 @@ public class DetailImformationActivity extends AppCompatActivity {
                     case R.id.btn_add_to_cart:
                         Toast.makeText(DetailImformationActivity.this, "共"+total+"元，已加入購物車", Toast.LENGTH_SHORT).show();
 
-                        CartManager.getInstance().addToCart(new CartItem(foodImg, foodName, total));
+                        CartManager.getInstance().addToCart(new CartItem(foodImg, foodName, amount, total));
                         finish();
                         break;
                 }

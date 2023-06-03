@@ -62,7 +62,7 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuHolder> {
                     MenuDomain menu = menuList.get(position);
                     // 在這裡執行項目點擊後的操作，例如跳轉到詳細資訊頁面
                     Intent intent = new Intent(context, DetailImformationActivity.class);
-                    Toast.makeText(context, "查看"+menu.getFood_name(), Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(context, "查看"+menu.getFood_name(), Toast.LENGTH_SHORT).show();
                     // 傳遞相關資料到詳細資訊頁面
                     intent.putExtra("food_img", menu.getFood_img());
                     intent.putExtra("food_name", menu.getFood_name());

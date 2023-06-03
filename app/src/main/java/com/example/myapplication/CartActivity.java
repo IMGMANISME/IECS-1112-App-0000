@@ -46,12 +46,6 @@ public class CartActivity extends AppCompatActivity {
             getSupportActionBar().hide();
         }
 
-        Intent intent = getIntent();
-        int foodImg = intent.getIntExtra("food_img", 0);
-        String foodName = intent.getStringExtra("food_name");
-        int price = intent.getIntExtra("food_total", 0);
-
-
         iv_home = (ImageView) findViewById(R.id.iv_home);
         iv_order = (ImageView) findViewById(R.id.iv_order);
         iv_cart = (ImageView) findViewById(R.id.iv_cart);
@@ -126,6 +120,8 @@ public class CartActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(CartActivity.this, CheckActivity.class);
+                // 將購物車資訊傳遞給 CheckActivity
+                intent.putExtra("cartItems", new ArrayList<>(cartItemList));
                 startActivity(intent);
             }
         });
