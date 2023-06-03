@@ -21,7 +21,7 @@
             android:name=".OrderActivity"
             android:exported="false" />
         <activity
-            android:name=".GetStartActivity"
+            android:name=".MenuActivity"
             android:exported="false" />
         <activity
             android:name=".SignInActivity"
@@ -42,7 +42,10 @@
             android:name=".PersonalProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".MenuActivity"
+            android:name=".CheckActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GetStartActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

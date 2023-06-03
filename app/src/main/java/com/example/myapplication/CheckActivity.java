@@ -20,6 +20,7 @@ import Adapter.MyCheckAdapter;
 import Adapter.MyOrderAdapter;
 import Domain.CheckDomain;
 import Domain.OrderDomain;
+import Item.CartItem;
 
 public class CheckActivity extends AppCompatActivity {
 
@@ -64,12 +65,12 @@ public class CheckActivity extends AppCompatActivity {
 
         check_RecyclerView.setLayoutManager(layoutManager);
         checkDomainList = new ArrayList<>();
-        checkDomainList.add(new CheckDomain("玉米蛋餅",5,25));
-        checkDomainList.add(new CheckDomain("玉米蛋餅",5,25));
-        checkDomainList.add(new CheckDomain("玉米蛋餅",5,25));
-        checkDomainList.add(new CheckDomain("玉米蛋餅",5,25));
-        checkDomainList.add(new CheckDomain("玉米蛋餅",5,25));
-        checkDomainList.add(new CheckDomain("玉米蛋餅",5,25));
+        // 獲取從購物車頁面傳遞過來的資訊
+        List<CartItem> cartItemList = (List<CartItem>) getIntent().getSerializableExtra("cartItems");
+
+
+        // 將購物車項目轉換為 CheckDomain
+        List<CheckDomain> checkDomainList = convertCartItemsToCheckDomain(cartItemList);
 
         int discount = -100;
 
@@ -88,6 +89,22 @@ public class CheckActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private List<CheckDomain> convertCartItemsToCheckDomain(List<CartItem> cartItems) {
+        List<CheckDomain> checkDomainList = new ArrayList<>();
+
+        for (CartItem cartItem : cartItems) {
+            String itemName = cartItem.getItemName();
+            int quantity = cartItem.getItemAmount();
+            int price = cartItem.getItemPrice()/quantity;
+
+            // 創建 CheckDomain 對象並添加到列表中
+            CheckDomain checkDomain = new CheckDomain(itemName, quantity, price);
+            checkDomainList.add(checkDomain);
+        }
+
+        return checkDomainList;
     }
 
     public int getSubtotal(List<CheckDomain> check_list) {

@@ -1,7 +1,11 @@
 package com.example.myapplication;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,6 +14,13 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import Adapter.CartAdapter;
+import Item.CartItem;
+import Manager.CartManager;
 
 public class DetailImformationActivity extends AppCompatActivity {
 
@@ -25,6 +36,8 @@ public class DetailImformationActivity extends AppCompatActivity {
     private TextView tvTotal;
     private Button btnAddToCart;
 
+    private CartAdapter cartAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +45,11 @@ public class DetailImformationActivity extends AppCompatActivity {
         if(getSupportActionBar() != null){
             getSupportActionBar().hide();
         }
+
+        Bundle extras = getIntent().getExtras();
+        int foodImg = extras.getInt("food_img");
+        String foodName = extras.getString("food_name");
+        String foodPrice = extras.getString("food_price");
 
         imFood = findViewById(R.id.im_food);
         tvTitle = findViewById(R.id.tv_title);
@@ -45,10 +63,14 @@ public class DetailImformationActivity extends AppCompatActivity {
         tvTotal = findViewById(R.id.tv_total);
         btnAddToCart = findViewById(R.id.btn_add_to_cart);
 
+        tvTitle.setText(foodName);
+        String priceString = foodPrice.substring(1);
+        tvTotal.setText(priceString);
+
         View.OnClickListener onClickListener = new View.OnClickListener() {
             int amount = Integer.parseInt(tvAmountNumber.getText().toString());
             int total = Integer.parseInt(tvTotal.getText().toString());
-            int price = total;
+            int price = Integer.parseInt(priceString);
             @Override
             public void onClick(View v) {
 
@@ -91,6 +113,9 @@ public class DetailImformationActivity extends AppCompatActivity {
 
                     case R.id.btn_add_to_cart:
                         Toast.makeText(DetailImformationActivity.this, "共"+total+"元，已加入購物車", Toast.LENGTH_SHORT).show();
+
+                        CartManager.getInstance().addToCart(new CartItem(foodImg, foodName, amount, total));
+                        finish();
                         break;
                 }
                 total = price * amount;
