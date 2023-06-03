@@ -64,6 +64,7 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuHolder> {
                     Intent intent = new Intent(context, DetailImformationActivity.class);
                     Toast.makeText(context, "查看"+menu.getFood_name(), Toast.LENGTH_SHORT).show();
                     // 傳遞相關資料到詳細資訊頁面
+                    intent.putExtra("food_img", menu.getFood_img());
                     intent.putExtra("food_name", menu.getFood_name());
                     intent.putExtra("food_price", menu.getFood_price());
                     // 啟動詳細資訊頁面
