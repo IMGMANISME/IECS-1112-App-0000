@@ -79,10 +79,10 @@ public class ComboFragment extends Fragment {
         menu_RecyclerView.setOverScrollMode(View.OVER_SCROLL_NEVER);
         menu_RecyclerView.setLayoutManager(layoutManager);
         combo_list = new ArrayList<>();
-        combo_list.add(new MenuDomain(R.drawable.chinese_omelet_1,"Meal A","$100"));
-        combo_list.add(new MenuDomain(R.drawable.chinese_omelet_2,"Meal B","$200"));
-        combo_list.add(new MenuDomain(R.drawable.chinese_omelet_3,"Meal C","$300"));
-        combo_list.add(new MenuDomain(R.drawable.chinese_omelet_4,"Meal D","$400"));
+        combo_list.add(new MenuDomain(R.drawable.meal_a,"Meal A","$100"));
+        combo_list.add(new MenuDomain(R.drawable.order_img_1,"Meal B","$200"));
+        combo_list.add(new MenuDomain(R.drawable.order_img_2,"Meal C","$300"));
+        combo_list.add(new MenuDomain(R.drawable.order_img_3,"Meal D","$400"));
         menu_RecyclerView.setAdapter(new MenuAdapter(requireContext(),combo_list));
 
         // Inflate the layout for this fragment

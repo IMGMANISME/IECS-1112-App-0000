@@ -87,6 +87,8 @@ public class EggPancakeFragment extends Fragment {
         egg_pancake_list.add(new MenuDomain(R.drawable.chinese_omelet_2,"鮪魚蛋餅","$35"));
         egg_pancake_list.add(new MenuDomain(R.drawable.chinese_omelet_3,"起司蛋餅","$35"));
         egg_pancake_list.add(new MenuDomain(R.drawable.chinese_omelet_4,"培根蛋餅","$35"));
+        egg_pancake_list.add(new MenuDomain(R.drawable.chinese_omelet_5,"燒肉蛋餅","$45"));
+        egg_pancake_list.add(new MenuDomain(R.drawable.chinese_omelet_6,"豬排蛋餅","$45"));
         menu_RecyclerView.setAdapter(new MenuAdapter(requireContext(),egg_pancake_list));
 
         // Inflate the layout for this fragment
