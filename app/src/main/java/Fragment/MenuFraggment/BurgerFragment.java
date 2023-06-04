@@ -84,6 +84,8 @@ public class BurgerFragment extends Fragment {
         burger_list.add(new MenuDomain(R.drawable.burger_2,"里肌豬排堡","$60"));
         burger_list.add(new MenuDomain(R.drawable.burger_3,"牛肉漢堡","$65"));
         burger_list.add(new MenuDomain(R.drawable.burger_4,"紐澳良辣雞堡","$60"));
+        burger_list.add(new MenuDomain(R.drawable.burger_5,"卡拉雞腿堡","$60"));
+        burger_list.add(new MenuDomain(R.drawable.burger_6,"鱈魚堡","$50"));
         menu_RecyclerView.setAdapter(new MenuAdapter(requireContext(),burger_list));
         // Inflate the layout for this fragment
         return view;
